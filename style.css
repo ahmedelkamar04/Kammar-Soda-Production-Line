@@ -357,25 +357,12 @@ hr{
     margin:30px auto;
     width:60%;
     max-width:700px;
+    height:auto;
     border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
-.showcase-image {
-    display: block;
-    margin: 30px auto;
-    width: 60%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-.showcase-image {
-    display: block;
-    margin: 25px auto;
-    width: 45%;
-    max-width: 500px;
-    height: auto;
-}
+
+
 .question-bank {
     max-width: 1000px;
     margin: auto;
