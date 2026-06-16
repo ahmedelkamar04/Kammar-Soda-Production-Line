@@ -512,3 +512,10 @@ hr{
     margin:0 auto;
     padding:60px 30px;
 }
+.author-info{
+    font-size:18px;
+    color:#ffffff;
+    margin-top:10px;
+    font-weight:500;
+    letter-spacing:0.5px;
+}
