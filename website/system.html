@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System - SparkFlow Soda Plant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">SF</div>
+  <h1>SparkFlow Soda Plant</h1>
+
+  <nav>
+    <a href="index.html">Project</a>
+    <a href="line.html">The Line</a>
+    <a class="active" href="system.html">System</a>
+    <a href="question-bank.html">Question Bank</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h2>The big picture</h2>
+  <p>Six stations, four software layers, one repository.</p>
+</section>
+
+<section>
+  <h2>System Architecture</h2>
+
+     
+
+  <div class="architecture">
+
+    <div class="layer physical">
+      <h3>PHYSICAL LAYER — 6 Stations</h3>
+      <div class="row six">
+        <div>Bottle Blow</div>
+        <div>Soda Fill</div>
+        <div>Carbonation</div>
+        <div>Cap On</div>
+        <div>Label</div>
+        <div>QC & Pack</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="layer backend">
+      <h3>BACK-END — production_line.py</h3>
+      <div class="row">
+        <div>Station Controller</div>
+        <div>Bottle FSM</div>
+        <div>Defect Detection</div>
+        <div>Alarm Manager</div>
+      </div>
+    </div>
+
+    <div class="split-arrows">
+      <span>↓</span>
+      <span>↓</span>
+    </div>
+
+    <div class="two-col">
+      <div class="layer hmi">
+        <h3>FRONT-END — HMI</h3>
+        <div class="inner">Start • Stop • Reset • Emergency Stop</div>
+        <div class="inner">Live Status • Alarms • Production Count</div>
+      </div>
+
+      <div class="layer data">
+        <h3>DATA PIPELINE</h3>
+        <div class="inner">Python Producer → InfluxDB → Grafana</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="layer orchestration">
+      <h3>ORCHESTRATION — Docker & GitHub</h3>
+      <p>
+        Docker runs InfluxDB and Grafana as containers. GitHub stores the source
+        code, and GitHub Pages hosts the project website.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>System Overview</h2>
+  <p>
+    The SparkFlow Soda Plant is organized into four layers. The physical layer
+    models the six manufacturing stations. The Python backend controls bottle
+    movement, state transitions, production counters, and defect detection.
+  </p>
+
+  <p>
+    The HMI provides operator controls and live process monitoring. Production
+    data is stored in InfluxDB and visualized using Grafana dashboards.
+  </p>
+</section>
+
+</main>
+
+</body>
+</html>
+<section>
+    <h2>Operator HMI</h2>
+
+    <img src="images/system-architecture.png"
+     alt="SparkFlow Soda Plant HMI"
+     style="display:block; margin:auto; width:70%;">
+
+    <p>
+        The Human Machine Interface (HMI) is the primary operator
+        control panel for the SparkFlow Soda Plant. It provides
+        real-time visibility of production performance, bottle
+        counts, machine status and alarm conditions.
+    </p>
+
+    <p>
+        Operators can start, stop, reset and safely shut down the
+        production line using dedicated control buttons. The HMI
+        also displays the active production stage and overall
+        system efficiency, allowing rapid response to faults and
+        process interruptions.
+    </p>
+</section>

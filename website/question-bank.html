@@ -1,0 +1,167 @@
+<div class="question-header">
+    <h1>Question Bank</h1>
+    <p>
+        Technical questions and answers covering Git, MES, SCADA,
+        Docker, InfluxDB, Grafana, and the SparkFlow Soda Plant project.
+    </p>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+        <section class="question-bank">
+
+            <div class="question-card">
+                <h3>Q1. In the kitchen analogy, what does the staging area represent?</h3>
+                <p>
+                    The staging area is like a preparation table. The command
+                    <code>git add &lt;file&gt;</code>
+                    moves a file into the staging area.
+                </p>
+            </div>
+
+            <!-- Q2 -->
+            <!-- Q3 -->
+            <!-- Q4 -->
+            <!-- etc... -->
+
+<div class="question-card">
+<h3>Q2. What does git init do?</h3>
+<p>
+The command <strong>git init</strong> converts a normal folder into a Git repository and creates a hidden <strong>.git</strong> directory that stores all version control information.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q3. Explain the three-zone mental model of Git.</h3>
+<p>
+The Working Directory contains files being edited. The Staging Area contains files prepared for commit using git add. The Commit History stores permanent snapshots created using git commit.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q4. What is the difference between git diff and git status?</h3>
+<p>
+git status shows which files have changed, while git diff displays the exact line-by-line modifications made to the files.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q5. What does git restore &lt;file&gt; do?</h3>
+<p>
+git restore removes uncommitted changes and restores the file to its last committed state.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q6. What is a Git branch?</h3>
+<p>
+A branch is an independent line of development that allows new features and experiments to be created without affecting the main branch.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q7. What does git clone &lt;url&gt; do?</h3>
+<p>
+git clone downloads an existing repository along with its complete history. Unlike git init, it starts from an existing project rather than creating a new repository.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q8. What is a remote in Git?</h3>
+<p>
+A remote is a shared repository hosted on a server such as GitHub. git push uploads local commits, while git pull downloads and integrates changes from the remote repository.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q9. Which are the SEMI E10 Equipment States?</h3>
+<p>
+The SEMI E10 states are Standby, Productive, Engineering, Scheduled Downtime, Unscheduled Downtime, and Non-Scheduled Downtime.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q10. How are the SEMI E10 time buckets represented?</h3>
+<p>
+Total Time is divided into Operations Time and Non-Scheduled Time. Operations Time is divided into Uptime and Downtime. Uptime includes Productive, Standby, and Engineering. Downtime includes Scheduled and Unscheduled Downtime.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q11. What is an HMI and what are the three rules of good HMI design?</h3>
+<p>
+An HMI is a Human Machine Interface that allows operators to monitor and control equipment. Good HMI design should show only necessary information, make abnormal conditions obvious, and always represent the true machine state.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q12. What is the difference between Back End and Front End?</h3>
+<p>
+The Back End contains the logic, data, and decision-making processes. The Front End displays information and receives user input. In this project, production_line.py is the Back End and the HMI acts as the Front End.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q13. What is the role of the Abstract Base Class Station?</h3>
+<p>
+The Station abstract class defines a common interface for all production stations. Concrete subclasses such as BottleBlow, SodaFill, Carbonation, CapOn, Label, and QualityControl implement their own processing behavior.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q14. What is the SEMI E10 standard and what states are used in the project?</h3>
+<p>
+SEMI E10 is a standard used to classify machine time. The SparkFlow Soda Plant uses Productive, Standby, and Unscheduled Downtime states.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q15. What does OEE stand for?</h3>
+<p>
+OEE stands for Overall Equipment Effectiveness. It is calculated as Availability × Performance × Quality. A world-class manufacturing line targets an OEE above 85%.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q16. What is a Manufacturing Execution System (MES)?</h3>
+<p>
+A Manufacturing Execution System monitors and coordinates factory-floor operations in real time. MES operates at ISA-95 Level 3 between production equipment and enterprise planning systems.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q17. What is a Finite State Machine (FSM)?</h3>
+<p>
+A Finite State Machine allows an object to exist in only one state at a time. In this project, bottles move through states such as blowing, filling, carbonation, capping, labeling, quality control, packed, and rejected.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q18. In the InfluxDB/Grafana stack, which component writes, stores, and visualizes data?</h3>
+<p>
+The Python backend writes production data, InfluxDB stores the data, and Grafana visualizes the information through dashboards and charts.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q19. What is Docker and what are its main applications?</h3>
+<p>
+Docker is a containerization platform that packages applications and dependencies into portable containers. It is commonly used for deployment, testing, microservices, and cloud-native applications.
+</p>
+</div>
+
+<div class="question-card">
+<h3>Q20. Describe the architecture of the SparkFlow Soda Plant project.</h3>
+<p>
+The SparkFlow Soda Plant consists of six production stations: Bottle Blow, Soda Fill, Carbonation, Cap On, Label, and QC & Pack. The Python backend controls bottle movement, state transitions, production statistics, and defect detection. A SCADA-style HMI provides operator control and monitoring. Production data is stored in InfluxDB and visualized through Grafana dashboards. Docker containers host the services, creating a complete industrial automation simulation similar to a small Manufacturing Execution System operating at ISA-95 Level 3.
+</p>
+</div>
+
+</section>

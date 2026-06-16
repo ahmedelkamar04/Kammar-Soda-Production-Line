@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SparkFlow Soda Plant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">SF</div>
+  <h1>SparkFlow Soda Plant</h1>
+
+  <nav>
+    <a class="active" href="index.html">Project</a>
+    <a href="line.html">The Line</a>
+    <a href="system.html">System</a>
+    <a href="question-bank.html">Question Bank</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Soda Bottle Production Line</h2>
+    <p>
+      A simulated carbonated soft-drink bottling system with Python backend logic,
+      a SCADA-style HMI, InfluxDB data storage, Grafana dashboards, Docker deployment,
+      and GitHub Pages documentation.
+    </p>
+  </section>
+
+  <section>
+    <h2>Project overview</h2>
+    <p>
+      The project models a 500 ml soda bottle production line. The process begins
+      with bottle forming and continues through filling, carbonation, capping,
+      labeling, quality control, and packing.
+    </p>
+
+    <p>
+      Each station represents a real manufacturing step. Defective bottles can be
+      detected because of underfilling, missing caps, missing labels, or low
+      carbonation.
+    </p>
+  </section>
+
+ <section>
+  <h2>Technology Stack</h2>
+
+  <div class="stack-flow">
+    <div class="stack-box">🐍 Python Backend</div>
+    <div class="stack-arrow">→</div>
+
+    <div class="stack-box">🖥️ SCADA HMI</div>
+    <div class="stack-arrow">→</div>
+
+    <div class="stack-box">🗄️ InfluxDB</div>
+    <div class="stack-arrow">→</div>
+
+    <div class="stack-box">📊 Grafana</div>
+  </div>
+<section>
+    <h2>Operator HMI</h2>
+
+    <img src="images/system-architecture.png"
+         alt="SparkFlow HMI"
+         class="showcase-image">
+
+    <p>
+        The SparkFlow Human Machine Interface (HMI) provides operators with
+        real-time visibility into production performance. Operators can start,
+        stop and reset the production line while monitoring bottle counts,
+        alarms, machine status and efficiency metrics.
+    </p>
+</section>
+<section>
+    <h2>Grafana Monitoring Dashboard</h2>
+
+    <img src="images/grafana-dashboard.png"
+         alt="Grafana Dashboard"
+         class="showcase-image">
+
+    <p>
+        Production data is streamed into InfluxDB and visualized through
+        Grafana dashboards. The dashboard displays throughput, defect rates,
+        station status and overall production efficiency in real time.
+    </p>
+</section>
+  <p>
+    The Python backend controls the production line logic. The SCADA-style
+    HMI gives operators live control and monitoring. InfluxDB stores production
+    data, and Grafana visualizes the data through dashboards.
+  </p>
+</section>
+</main>
+
+</body>
+</html>

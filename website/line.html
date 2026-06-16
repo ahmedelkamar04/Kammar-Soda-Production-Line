@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Line - SparkFlow Soda Plant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">SF</div>
+  <h1>SparkFlow Soda Plant</h1>
+
+  <nav>
+    <a href="index.html">Project</a>
+    <a class="active" href="line.html">The Line</a>
+    <a href="system.html">System</a>
+    <a href="question-bank.html">Question Bank</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h2>The Production Line</h2>
+  <p>
+    The SparkFlow Soda Plant simulates the production of a 500 ml carbonated
+    soda bottle. The line includes six stations: bottle blowing, soda filling,
+    carbonation, capping, labeling, and quality control with packing.
+  </p>
+</section>
+
+<section>
+  <h2>Production Flow — 6 Stations</h2>
+
+  <div class="production-diagram">
+    <div class="station-box">
+      <span>1</span>
+      <h3>Bottle Blow</h3>
+      <div class="icon">🧴</div>
+    </div>
+
+    <div class="station-box">
+      <span>2</span>
+      <h3>Soda Fill</h3>
+      <div class="icon">🥤</div>
+    </div>
+
+    <div class="station-box">
+      <span>3</span>
+      <h3>Carbonation</h3>
+      <div class="icon">💨</div>
+    </div>
+
+    <div class="station-box">
+      <span>4</span>
+      <h3>Cap On</h3>
+      <div class="icon">🔴</div>
+    </div>
+
+    <div class="station-box">
+      <span>5</span>
+      <h3>Label</h3>
+      <div class="icon">🏷️</div>
+    </div>
+
+    <div class="station-box">
+      <span>6</span>
+      <h3>QC & Pack</h3>
+      <div class="icon">✅</div>
+    </div>
+
+    <div class="conveyor"></div>
+  </div>
+
+  <p class="caption">
+    A defective bottle at any station is removed from the line and counted as rejected product.
+  </p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Station 1 — Bottle Blow</h2>
+ <p>
+The production process begins with a PET preform, a small plastic tube that
+contains the material required to form the final bottle. The preforms are
+heated to the correct temperature before entering the blow moulding station.
+</p>
+
+<p>
+Compressed air is injected into the heated preform while it is held inside
+a mould. The plastic expands until it takes the shape of a 500 ml soda bottle.
+This process is widely used in the beverage industry because it produces
+lightweight and durable containers at high speed.
+</p>
+
+<p>
+The station verifies that the bottle has been formed correctly before it
+moves to the filling station. Bottles with structural defects are rejected
+to prevent production problems further down the line.
+</p>
+</section>
+
+<section>
+  <h2>Station 2 — Soda Fill</h2>
+  <p>
+After the bottle has been formed, it is transported to the filling station.
+This station dispenses the required volume of soda into the bottle using a
+controlled filling system.
+</p>
+
+<p>
+Accurate filling is critical because underfilled bottles fail quality
+requirements while overfilled bottles increase production costs. Sensors
+continuously monitor the filling process to ensure consistency.
+</p>
+
+<p>
+In the simulation, a bottle may occasionally fail the fill-level inspection.
+These bottles are marked as defective and removed from the production line.
+</p>
+</section>
+
+<section>
+  <h2>Station 3 — Carbonation</h2>
+  <p>
+Carbonation is the process of dissolving carbon dioxide gas into the beverage.
+This stage gives the product its characteristic sparkling effect and improves
+the overall drinking experience.
+</p>
+
+<p>
+The carbonation station controls pressure and gas flow to achieve the desired
+carbonation level. Maintaining a consistent carbonation profile is essential
+for product quality and customer satisfaction.
+</p>
+
+<p>
+If the carbonation level falls below the required specification, the bottle
+is classified as defective and is removed from the line during quality control.
+</p>
+</section>
+
+<section>
+  <h2>Station 4 — Cap On</h2>
+  <p>
+The capping station seals the bottle immediately after filling and carbonation.
+A mechanical system places a cap on each bottle and tightens it to a predefined
+torque value.
+</p>
+
+<p>
+Proper sealing prevents product leakage and protects the beverage from
+contamination. The station also ensures that carbonation remains trapped
+inside the bottle until consumption.
+</p>
+
+<p>
+Missing or loose caps are detected through inspection checks. Any bottle that
+fails these checks is automatically rejected.
+</p>
+</section>
+
+<section>
+  <h2>Station 5 — Label</h2>
+  <p>
+The labeling station applies the product label to the outside of the bottle.
+The label contains branding information, nutritional details, product
+identification, and manufacturing data.
+</p>
+
+<p>
+Modern production systems use automated label applicators to maintain
+consistent positioning and appearance. Accurate label placement is important
+for both regulatory compliance and product presentation.
+</p>
+
+<p>
+Bottles with damaged or missing labels are flagged as defective because they
+do not meet packaging standards.
+</p>
+</section>
+
+<section>
+  <h2>Station 6 — QC & Pack</h2>
+  <p>
+The final stage combines quality control and packaging operations. The station
+inspects each bottle to verify fill level, carbonation quality, cap placement,
+and label condition.
+</p>
+
+<p>
+Only bottles that pass every inspection are accepted as finished products.
+Rejected bottles are recorded as defects and removed from the production flow.
+</p>
+
+<p>
+Accepted bottles are packed into cartons and prepared for shipment to
+distribution centers and retail locations. This station represents the final
+checkpoint before the product leaves the manufacturing facility.
+</p>
+</section>
+
+</main>
+
+</body>
+</html>
