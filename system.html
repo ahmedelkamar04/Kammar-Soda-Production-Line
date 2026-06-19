@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>System - SparkFlow Soda Plant</title>
+  <title>System - KAMAR SODA</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="brand">SF</div>
-  <h1>SparkFlow Soda Plant</h1>
+  <h1>KAMAR SODA</h1>
 
   <nav>
     <a href="index.html">Project</a>
@@ -22,12 +22,38 @@
 <main>
 
 <section class="hero">
-  <h2>The big picture</h2>
-  <p>Six stations, four software layers, one repository.</p>
-</section>
+ <h1>The big picture</h1>
 
-<section>
-  <h2>System Architecture</h2>
+<p class="hero-subtitle">
+    Six stations, four software layers, one intelligent production system.
+</p>
+
+<p>
+    The KAMAR SODA is a simulated industrial bottling line
+    designed to demonstrate modern manufacturing principles,
+    production monitoring and OEE calculation.
+</p>
+
+<p>
+    The production line consists of six stations: Bottle Blow,
+    Soda Fill, Carbonation, Cap On, Label and QC & Pack.
+</p>
+
+<div class="highlight-box">
+    <h3>Production Flow</h3>
+
+    <p>
+        Bottle Blow → Soda Fill → Carbonation →
+        Cap On → Label → QC & Pack
+    </p>
+
+    <p>
+        Each station reports production counts, machine status,
+        quality information and downtime events.
+    </p>
+</div>
+
+<h2>System Architecture</h2>
 
      
 
@@ -91,7 +117,7 @@
 <section>
   <h2>System Overview</h2>
   <p>
-    The SparkFlow Soda Plant is organized into four layers. The physical layer
+    The KAMAR SODA is organized into four layers. The physical layer
     models the six manufacturing stations. The Python backend controls bottle
     movement, state transitions, production counters, and defect detection.
   </p>
@@ -109,13 +135,13 @@
 <section>
   <h2>Operator HMI</h2>
 
-  <img src="https://ahmedelkamar04.github.io/SparkFlow-Soda-Plant/website/images/system-architecture.png"
-     alt="SparkFlow Soda Plant HMI"
+  <img src="https://ahmedelkamar04.github.io/KAMAR-Soda-Plant/website/images/system-architecture.png"
+     alt="KAMAR SODA HMI"
      class="showcase-image">
 
     <p>
       The Human Machine Interface (HMI) is the primary operator
-      control panel for the SparkFlow Soda Plant. It provides
+      control panel for the KAMAR SODA. It provides
       real-time visibility of production performance, bottle
       counts, machine status and alarm conditions.
     </p>
@@ -126,5 +152,71 @@
       also displays the active production stage and overall
       system efficiency, allowing rapid response to faults and
       process interruptions.
+    </p>
+</section>
+
+<section>
+    <h2>SEMI E10 Time Buckets</h2>
+
+    <div class="e10-diagram">
+
+        <div class="e10-row total">
+            <div class="box">TOTAL TIME</div>
+        </div>
+
+        <div class="e10-row">
+            <div class="box operations">OPERATIONS TIME</div>
+            <div class="box nonscheduled">NON-SCHEDULED</div>
+        </div>
+
+        <div class="e10-row">
+            <div class="box uptime">UPTIME</div>
+            <div class="box downtime">DOWNTIME</div>
+        </div>
+
+        <div class="e10-row">
+            <div class="box productive">PRODUCTIVE</div>
+            <div class="box standby">STANDBY</div>
+            <div class="box engineering">ENGINEERING</div>
+            <div class="box scheduled">SCHEDULED DT</div>
+            <div class="box unscheduled">UNSCHEDULED DT</div>
+        </div>
+
+    </div>
+
+    <div class="e10-legend">
+        <div>🟢 Productive – Producing saleable soda bottles</div>
+        <div>🟩 Standby – Waiting for materials</div>
+        <div>🟦 Engineering – Testing & commissioning</div>
+        <div>🟧 Scheduled DT – Cleaning & maintenance</div>
+        <div>🟥 Unscheduled DT – Equipment fault</div>
+        <div>⬜ Non-Scheduled – Plant shut down</div>
+    </div>
+</section>
+    <p>
+        SEMI E10 classifies equipment time into Productive,
+        Standby and Downtime states. This project uses a
+        simplified implementation to support production
+        monitoring and OEE calculations.
+    </p>
+</section>
+<section>
+    <h2>Front End — HMI Design</h2>
+
+    <img src="website/images/system-architecture.png"
+         alt="KAMAR HMI"
+         class="showcase-image">
+
+    <p>
+        The HMI is developed using Python and pygame. It
+        provides real-time visibility of production counts,
+        defect rate, alarms, machine state and production
+        progress.
+    </p>
+
+    <p>
+        Operators can Start, Stop, Reset and Emergency Stop
+        the production line. Defective products are identified
+        and alarm messages indicate the cause of the fault.
     </p>
 </section>

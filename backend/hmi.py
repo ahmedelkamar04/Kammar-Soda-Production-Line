@@ -6,7 +6,7 @@ pygame.init()
 
 WIDTH, HEIGHT = 1100, 700
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("SparkFlow Soda Plant HMI")
+pygame.display.set_caption("KAMAR SODA HMI")
 
 NAVY = (8, 27, 47)
 ORANGE = (217, 98, 38)
@@ -27,6 +27,8 @@ running = False
 produced = 50
 defective = 5
 good = produced - defective
+
+current_alarm = "No Active Alarms"
 station_index = 0
 last_alarm = "No Active Alarms"
 
@@ -43,7 +45,9 @@ alarms = [
     "Underfilled Bottle",
     "Missing Cap",
     "Missing Label",
-    "Low Carbonation"
+    "Low Carbonation",
+    "Bottle Jam",
+    "Quality Check Failed"
 ]
 
 start_btn = pygame.Rect(70, 615, 150, 50)
@@ -83,14 +87,15 @@ while True:
             pygame.quit()
             sys.exit()
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if start_btn.collidepoint(event.pos):
-                running = True
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        if start_btn.collidepoint(event.pos):
+         running = True
+    last_alarm = "No Active Alarms"
 
-            if stop_btn.collidepoint(event.pos):
+    if stop_btn.collidepoint(event.pos):
                 running = False
 
-            if reset_btn.collidepoint(event.pos):
+    if reset_btn.collidepoint(event.pos):
                 running = False
                 produced = 0
                 defective = 0
@@ -98,7 +103,7 @@ while True:
                 station_index = 0
                 last_alarm = "No Active Alarms"
 
-            if emergency_btn.collidepoint(event.pos):
+    if emergency_btn.collidepoint(event.pos):
                 running = False
                 last_alarm = "Emergency Stop Activated"
 
@@ -118,13 +123,14 @@ while True:
             good = produced - defective
 
     efficiency = round((good / produced) * 100, 1) if produced > 0 else 0
-
+    defect_rate = round((defective / produced) * 100, 1) if produced > 0 else 0
+    
     screen.fill(WHITE)
 
     pygame.draw.rect(screen, NAVY, (0, 0, WIDTH, 110))
     pygame.draw.rect(screen, ORANGE, (0, 106, WIDTH, 4))
 
-    draw_text("SparkFlow Soda Plant", title_font, WHITE, 45, 25)
+    draw_text("KAMAR SODA", title_font, WHITE, 45, 25)
     draw_text("Carbonated Soft-Drink Production Line HMI", normal_font, (210, 220, 230), 48, 72)
 
     status_color = GREEN if running else RED
@@ -135,11 +141,12 @@ while True:
     draw_card(55, 135, 220, 100, "Produced Bottles", str(produced), BLUE)
     draw_card(305, 135, 220, 100, "Good Bottles", str(good), GREEN)
     draw_card(555, 135, 220, 100, "Defective Bottles", str(defective), RED)
-    draw_card(805, 135, 220, 100, "Efficiency", f"{efficiency}%", ORANGE)
+    draw_card(805, 135, 220, 100, "Defect Rate", f"{defect_rate}%", ORANGE)
+    draw_card(805, 245, 220, 100, "Efficiency", f"{efficiency}%", ORANGE) 
 
     pygame.draw.rect(screen, CARD, (55, 260, 450, 110), border_radius=12)
     draw_text("Plant Information", heading_font, TEXT, 75, 278)
-    draw_text("Plant: SparkFlow Soda Plant", normal_font, TEXT, 75, 315)
+    draw_text("Plant: KAMAR SODA", normal_font, TEXT, 75, 315)
     draw_text("Shift: A", normal_font, TEXT, 75, 345)
     draw_text("Operator: Ahmed", normal_font, TEXT, 240, 345)
 

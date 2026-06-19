@@ -1,7 +1,7 @@
 services:
   influxdb:
     image: influxdb:2.7
-    container_name: sparkflow-influxdb
+    container_name: KAMAR-influxdb
     ports:
       - "8086:8086"
     volumes:
@@ -9,7 +9,7 @@ services:
 
   grafana:
     image: grafana/grafana
-    container_name: sparkflow-grafana
+    container_name: KAMAR-grafana
     ports:
       - "3000:3000"
     volumes:

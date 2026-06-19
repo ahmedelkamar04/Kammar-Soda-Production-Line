@@ -505,3 +505,177 @@ hr{
     font-weight:500;
     letter-spacing:0.5px;
 }
+.semi-e10 {
+  max-width: 900px;
+  margin: 25px auto;
+  text-align: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.semi-e10 .row {
+  display: flex;
+  margin: 8px 0;
+  gap: 8px;
+}
+
+.semi-e10 .row div,
+.semi-e10 .total {
+  padding: 14px;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  text-transform: uppercase;
+}
+
+.semi-e10 .total {
+  background: #14213d;
+}
+
+.semi-e10 .operations {
+  flex: 4;
+  background: #3d5a80;
+}
+
+.semi-e10 .nonscheduled {
+  flex: 1;
+  background: #6c757d;
+}
+
+.semi-e10 .uptime {
+  flex: 3;
+  background: #2d6a4f;
+}
+
+.semi-e10 .downtime {
+  flex: 2;
+  background: #bc6c25;
+}
+
+.semi-e10 .productive {
+  flex: 2;
+  background: #40916c;
+}
+
+.semi-e10 .standby {
+  flex: 1;
+  background: #52b788;
+}
+
+.semi-e10 .engineering {
+  flex: 1;
+  background: #457b9d;
+}
+
+.semi-e10 .scheduled {
+  flex: 1;
+  background: #e76f51;
+}
+
+.semi-e10 .unscheduled {
+  flex: 1;
+  background: #9d0208;
+}
+.e10-diagram{
+    margin:40px 0;
+}
+
+.e10-row{
+    display:flex;
+    margin-bottom:12px;
+}
+
+.box{
+    text-align:center;
+    color:white;
+    font-weight:700;
+    padding:18px;
+    border-radius:6px;
+    margin-right:6px;
+}
+
+.total .box{
+    width:100%;
+    background:#0d1b2a;
+}
+
+.operations{
+    flex:4;
+    background:#34495e;
+}
+
+.nonscheduled{
+    flex:1;
+    background:#7f8c8d;
+}
+
+.uptime{
+    flex:3;
+    background:#2e8b57;
+}
+
+.downtime{
+    flex:2;
+    background:#d35400;
+}
+
+.productive{
+    flex:2;
+    background:#52b788;
+}
+
+.standby{
+    flex:1;
+    background:#74c69d;
+    color:black;
+}
+
+.engineering{
+    flex:1;
+    background:#95d5b2;
+    color:black;
+}
+
+.scheduled{
+    flex:1.2;
+    background:#e67e22;
+}
+
+.unscheduled{
+    flex:1.2;
+    background:#c0392b;
+}
+
+.e10-legend{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:25px;
+}
+.highlight-box{
+    background:#f7f7f7;
+    border-left:6px solid #e85d2a;
+    padding:25px;
+    margin:30px 0;
+    border-radius:8px;
+}
+
+.highlight-box h3{
+    margin-top:0;
+    color:#0d1b2a;
+}
+.showcase-image{
+    display:block;
+    max-width:900px;
+    width:100%;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+section{
+    margin-bottom:40px;
+}
+
+p{
+    line-height:1.8;
+}
