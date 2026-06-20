@@ -1,141 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KAMMAR SODA</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>KAMMAR SODA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="logo">SF</div>
+  <div class="logo">SF</div>
+  <h1>KAMMAR <span>SODA</span></h1>
 
-    <div>
-        <h1>KAMMAR <span>SODA</span></h1>
-    </div>
-
-    <nav>
-        <a class="active" href="index.html">Project</a>
-        <a href="line.html">The Line</a>
-        <a href="system.html">System</a>
-        <a href="question-bank.html">Question Bank</a>
-        <a class="snake-btn" href="website/games/snake.html">Snake Game</a>
-    </nav>
+  <nav>
+    <a class="active" href="index.html">Project</a>
+    <a href="line.html">The Line</a>
+    <a href="system.html">System</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a class="snake-btn" href="website/games/snake.html">Snake Game</a>
+  </nav>
 </header>
 
-<section class="hero">
+<main>
 
-    <div class="hero-text">
-
-        <p class="welcome">WELCOME TO</p>
-
-        <h2>
-            KAMMAR <span>SODA</span>
-        </h2>
-
-        <h3>SMART PRODUCTION LINE</h3>
-
-        <p>
-            An educational project that demonstrates a modern beverage
-            production line using software engineering, industrial automation,
-            monitoring dashboards, Docker deployment, and system architecture.
-        </p>
-
-        <div class="buttons">
-            <a href="line.html" class="btn-primary">Explore The Line</a>
-            <a href="system.html" class="btn-secondary">View Architecture</a>
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-        <img src="website/images/system-architecture.png" alt="KAMMAR SODA">
-    </div>
-
-</section>
-
-<section class="stats">
-
-    <div class="card">
-        <h4>6</h4>
-        <p>Production Stations</p>
-    </div>
-
-    <div class="card">
-        <h4>4</h4>
-        <p>Software Layers</p>
-    </div>
-
-    <div class="card">
-        <h4>24/7</h4>
-        <p>Monitoring</p>
-    </div>
-
-    <div class="card">
-        <h4>100%</h4>
-        <p>Educational</p>
-    </div>
-
-</section>
-
-<section class="about">
-
-    <p class="section-title">ABOUT THE PROJECT</p>
-
-    <h2>
-        Six Stations. Four Software Layers.
-        One Smart Factory.
-    </h2>
+<section class="home-hero">
+  <div class="home-text">
+    <p class="welcome">SMART MANUFACTURING PROJECT</p>
+    <h2>KAMMAR <span>SODA</span></h2>
+    <h3>Industrial Bottling Line Simulation</h3>
 
     <p>
-        KAMMAR SODA demonstrates how industrial automation,
-        software engineering, Docker, monitoring systems,
-        and manufacturing concepts work together in a
-        modern production environment.
+      A complete educational production-line system demonstrating Python-based
+      control logic, HMI monitoring, system architecture, Docker deployment,
+      Grafana visualization, Git version control, and web-based documentation.
     </p>
 
+    <div class="buttons">
+      <a class="btn-primary" href="line.html">Explore Production Line</a>
+      <a class="btn-secondary" href="system.html">View System Architecture</a>
+    </div>
+  </div>
+
+  <div class="home-visual factory-visual">
+  <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0b1b2b"/>
+        <stop offset="100%" stop-color="#132f46"/>
+      </linearGradient>
+
+      <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ff8c1a"/>
+        <stop offset="100%" stop-color="#d35400"/>
+      </linearGradient>
+
+      <filter id="shadow">
+        <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+      </filter>
+    </defs>
+
+    <!-- Background -->
+   <rect width="900" height="520" rx="28" fill="url(#bgGrad)"/>
+   </svg>
+</div>
 </section>
 
-<section class="features">
-
-    <div class="feature-box">
-        <h3>THE LINE</h3>
-        <p>
-            Explore the beverage production process across six stations.
-        </p>
-        <a href="line.html">Learn More →</a>
-    </div>
-
-    <div class="feature-box">
-        <h3>SYSTEM ARCHITECTURE</h3>
-        <p>
-            Understand the software layers powering the smart factory.
-        </p>
-        <a href="system.html">Learn More →</a>
-    </div>
-
-    <div class="feature-box">
-        <h3>QUESTION BANK</h3>
-        <p>
-            Technical questions covering Git, Docker, MES and SCADA.
-        </p>
-        <a href="question-bank.html">Start Learning →</a>
-    </div>
-
-    <div class="feature-box">
-        <h3>SNAKE GAME</h3>
-        <p>
-            Interactive game created as an additional software module.
-        </p>
-        <a href="website/games/snake.html">Play Now →</a>
-    </div>
-
+<section class="stats clean-stats">
+  <div class="card"><h4>6</h4><p>Production Stations</p></div>
+  <div class="card"><h4>4</h4><p>Software Layers</p></div>
+  <div class="card"><h4>89.1%</h4><p>Simulated Efficiency</p></div>
+  <div class="card"><h4>24/7</h4><p>Monitoring Concept</p></div>
 </section>
+
+<section class="about clean-about">
+  <p class="section-title">ABOUT THE PROJECT</p>
+  <h2>Six Stations. Four Software Layers. One Smart Factory.</h2>
+
+  <p>
+    KAMMAR SODA simulates a modern beverage production line where bottles move
+    through blow molding, filling, carbonation, capping, labeling, and quality
+    control. The project combines industrial automation concepts with software
+    engineering tools to demonstrate how smart manufacturing systems are planned,
+    monitored, and documented.
+  </p>
+</section>
+
+<section class="screenshots-section">
+  <h2>Project Evidence</h2>
+
+  <div class="screenshots-grid">
+    <div class="shot-card">
+      <img src="screenshots/hmi-v1.png" alt="HMI Screenshot">
+      <h3>Operator HMI</h3>
+      <p>Displays production counters, machine status, alarms, and station flow.</p>
+    </div>
+
+    <div class="shot-card">
+      <img src="website/images/system-architecture.png" alt="System Architecture">
+      <h3>System Architecture</h3>
+      <p>Shows the physical, control, data, and visualization layers.</p>
+    </div>
+
+    <div class="shot-card">
+      <img src="website/images/grafana-dashboard.png" alt="Grafana Dashboard">
+      <h3>Grafana Dashboard</h3>
+      <p>Represents real-time monitoring and production data visualization.</p>
+    </div>
+  </div>
+</section>
+
+<section class="features clean-features">
+  <div class="feature-box">
+    <h3>Production Line</h3>
+    <p>Explore the full beverage production workflow across six stations.</p>
+    <a href="line.html">Learn More →</a>
+  </div>
+
+  <div class="feature-box">
+    <h3>System Architecture</h3>
+    <p>Understand how the project is organized into industrial software layers.</p>
+    <a href="system.html">Learn More →</a>
+  </div>
+
+  <div class="feature-box">
+    <h3>Question Bank</h3>
+    <p>Review technical questions about Git, Docker, MES, SCADA, and Grafana.</p>
+    <a href="question-bank.html">Start Learning →</a>
+  </div>
+
+  <div class="feature-box">
+    <h3>Snake Game</h3>
+    <p>Additional interactive programming module included in the project.</p>
+    <a href="website/games/snake.html">Play Now →</a>
+  </div>
+</section>
+
+</main>
 
 <footer>
-    © 2025 KAMMAR SODA | Smart Production Line Project
+  © 2025 KAMMAR SODA | Smart Production Line Project
 </footer>
 
 </body>
