@@ -1562,3 +1562,52 @@ footer {
   text-align: center;
   font-weight: 800;
 }
+/* FIX PRODUCTION FLOW LAYOUT */
+.flow-line,
+.production-flow,
+.flow-steps {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: nowrap;
+}
+
+.flow-step {
+  width: 150px;
+  min-height: 150px;
+  border: 2px solid #ff7a00;
+  border-radius: 8px;
+  background: #f8f5ea;
+  color: #0b1b2b;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flow-step h3 {
+  color: #0b1b2b;
+  font-size: 15px;
+  margin: 10px 0 0;
+  font-weight: 800;
+}
+
+.step-number {
+  background: #ff7a00;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.step-icon {
+  font-size: 28px;
+}
