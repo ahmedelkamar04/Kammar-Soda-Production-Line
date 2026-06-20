@@ -76,15 +76,51 @@
     <img src="website/images/system-architecture.png" alt="KAMMAR SODA System Architecture">
   </section>
 
-  <section class="diagram-section">
-    <h2>SEMI E10 Time Buckets</h2>
-    <p>
-      SEMI E10 classifies equipment time into productive, standby,
-      engineering, scheduled downtime, unscheduled downtime, and non-scheduled
-      states. In this project, the concept is used to explain machine uptime,
-      downtime, and production monitoring.
-    </p>
-  </section>
+ <section class="diagram-section semi-section">
+  <h2>SEMI E10 Time Buckets</h2>
+
+  <p>
+    SEMI E10 classifies equipment time into productive, standby,
+    engineering, scheduled downtime, unscheduled downtime, and non-scheduled
+    states. In this project, it is used to explain uptime, downtime, and
+    production monitoring for the KAMMAR SODA line.
+  </p>
+
+  <div class="semi-e10-diagram">
+
+    <div class="semi-row total">
+      <div class="semi-box full">TOTAL TIME</div>
+    </div>
+
+    <div class="semi-row">
+      <div class="semi-box operations">OPERATIONS TIME</div>
+      <div class="semi-box nonscheduled">NON-SCHEDULED</div>
+    </div>
+
+    <div class="semi-row">
+      <div class="semi-box uptime">UPTIME</div>
+      <div class="semi-box downtime">DOWNTIME</div>
+    </div>
+
+    <div class="semi-row">
+      <div class="semi-box productive">PRODUCTIVE</div>
+      <div class="semi-box standby">STANDBY</div>
+      <div class="semi-box engineering">ENGINEERING</div>
+      <div class="semi-box scheduled">SCHEDULED DT</div>
+      <div class="semi-box unscheduled">UNSCHEDULED DT</div>
+    </div>
+
+    <div class="semi-legend">
+      <p><span class="dot productive-dot"></span> Productive — producing saleable soda bottles</p>
+      <p><span class="dot standby-dot"></span> Standby — waiting for materials</p>
+      <p><span class="dot engineering-dot"></span> Engineering — testing and commissioning</p>
+      <p><span class="dot scheduled-dot"></span> Scheduled DT — cleaning and maintenance</p>
+      <p><span class="dot unscheduled-dot"></span> Unscheduled DT — equipment fault</p>
+      <p><span class="dot nonscheduled-dot"></span> Non-Scheduled — plant shut down</p>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
