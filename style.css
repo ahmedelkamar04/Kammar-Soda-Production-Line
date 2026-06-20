@@ -1130,3 +1130,95 @@ footer {
     padding: 20px;
   }
 }
+/* ===== SYSTEM PAGE FIX ===== */
+
+.system-page {
+  padding: 70px;
+}
+
+.system-hero {
+  background: linear-gradient(135deg, #0d1d2b, #132a3d);
+  border: 1px solid rgba(255,122,0,0.35);
+  border-radius: 18px;
+  padding: 50px;
+  margin-bottom: 40px;
+}
+
+.system-hero h2 {
+  font-size: 52px;
+  margin: 10px 0 20px;
+}
+
+.system-hero p {
+  max-width: 900px;
+  color: #d4dde7;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.system-card {
+  background: rgba(8, 24, 39, 0.95);
+  border: 1px solid rgba(255,122,0,0.3);
+  border-radius: 16px;
+  padding: 35px;
+}
+
+.system-card h3 {
+  color: #ff7a00;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.system-card p {
+  color: #d4dde7;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.diagram-section {
+  background: rgba(8, 24, 39, 0.9);
+  border: 1px solid rgba(255,122,0,0.3);
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.diagram-section h2 {
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.diagram-section p {
+  color: #d4dde7;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.diagram-section img {
+  width: 100%;
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+@media (max-width: 900px) {
+  .system-page {
+    padding: 25px;
+  }
+
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-hero h2 {
+    font-size: 38px;
+  }
+}

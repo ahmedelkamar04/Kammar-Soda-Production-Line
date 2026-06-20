@@ -2,222 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>System - KAMAR SODA</title>
+  <title>System - KAMMAR SODA</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <div class="brand">SF</div>
-  <h1>KAMAR SODA</h1>
+  <div class="logo">SF</div>
+  <h1>KAMMAR <span>SODA</span></h1>
 
   <nav>
     <a href="index.html">Project</a>
     <a href="line.html">The Line</a>
     <a class="active" href="system.html">System</a>
     <a href="question-bank.html">Question Bank</a>
-    <a href="website/games/snake.html">Snake Game</a>
+    <a class="snake-btn" href="website/games/snake.html">Snake Game</a>
   </nav>
 </header>
 
-<main>
+<main class="system-page">
 
-<section class="hero">
- <h1>The big picture</h1>
-
-<p class="hero-subtitle">
-    Six stations, four software layers, one intelligent production system.
-</p>
-
-<p>
-    The KAMAR SODA is a simulated industrial bottling line
-    designed to demonstrate modern manufacturing principles,
-    production monitoring and OEE calculation.
-</p>
-
-<p>
-    The production line consists of six stations: Bottle Blow,
-    Soda Fill, Carbonation, Cap On, Label and QC & Pack.
-</p>
-
-<div class="highlight-box">
-    <h3>Production Flow</h3>
-
-    <p>
-        Bottle Blow → Soda Fill → Carbonation →
-        Cap On → Label → QC & Pack
-    </p>
-
-    <p>
-        Each station reports production counts, machine status,
-        quality information and downtime events.
-    </p>
-</div>
-
-<h2>System Architecture</h2>
-
-     
-
-  <div class="architecture">
-
-    <div class="layer physical">
-      <h3>PHYSICAL LAYER — 6 Stations</h3>
-      <div class="row six">
-        <div>Bottle Blow</div>
-        <div>Soda Fill</div>
-        <div>Carbonation</div>
-        <div>Cap On</div>
-        <div>Label</div>
-        <div>QC & Pack</div>
-      </div>
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="layer backend">
-      <h3>BACK-END — production_line.py</h3>
-      <div class="row">
-        <div>Station Controller</div>
-        <div>Bottle FSM</div>
-        <div>Defect Detection</div>
-        <div>Alarm Manager</div>
-      </div>
-    </div>
-
-    <div class="split-arrows">
-      <span>↓</span>
-      <span>↓</span>
-    </div>
-
-    <div class="two-col">
-      <div class="layer hmi">
-        <h3>FRONT-END — HMI</h3>
-        <div class="inner">Start • Stop • Reset • Emergency Stop</div>
-        <div class="inner">Live Status • Alarms • Production Count</div>
-      </div>
-
-      <div class="layer data">
-        <h3>DATA PIPELINE</h3>
-        <div class="inner">Python Producer → InfluxDB → Grafana</div>
-      </div>
-    </div>
-
-    <div class="arrow">↓</div>
-
-    <div class="layer orchestration">
-      <h3>ORCHESTRATION — Docker & GitHub</h3>
+  <section class="system-hero">
+    <div>
+      <p class="welcome">SYSTEM OVERVIEW</p>
+      <h2>The Big Picture</h2>
       <p>
-        Docker runs InfluxDB and Grafana as containers. GitHub stores the source
-        code, and GitHub Pages hosts the project website.
+        KAMMAR SODA is organized into four software layers that connect
+        the simulated production process, Python control logic, HMI monitoring,
+        and web-based project documentation.
+      </p>
+    </div>
+  </section>
+
+  <section class="system-grid">
+
+    <div class="system-card">
+      <h3>Physical Layer</h3>
+      <p>
+        Represents the six production stations: Bottle Blow, Soda Fill,
+        Carbonation, Cap On, Label, and QC & Pack.
       </p>
     </div>
 
-  </div>
-</section>
+    <div class="system-card">
+      <h3>Control Layer</h3>
+      <p>
+        Python logic controls station flow, production counters, state changes,
+        defect detection, and alarm behaviour.
+      </p>
+    </div>
 
-<section>
-  <h2>System Overview</h2>
-  <p>
-    The KAMAR SODA is organized into four layers. The physical layer
-    models the six manufacturing stations. The Python backend controls bottle
-    movement, state transitions, production counters, and defect detection.
-  </p>
+    <div class="system-card">
+      <h3>Data Layer</h3>
+      <p>
+        Production values are prepared for monitoring and can be connected to
+        InfluxDB and Grafana for industrial-style dashboards.
+      </p>
+    </div>
 
-  <p>
-    The HMI provides operator controls and live process monitoring. Production
-    data is stored in InfluxDB and visualized using Grafana dashboards.
-  </p>
-</section>
+    <div class="system-card">
+      <h3>Visualization Layer</h3>
+      <p>
+        The HMI and website provide operators and viewers with clear system
+        visibility, process explanation, and technical documentation.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="diagram-section">
+    <h2>System Architecture</h2>
+    <img src="website/images/system-architecture.png" alt="KAMMAR SODA System Architecture">
+  </section>
+
+  <section class="diagram-section">
+    <h2>SEMI E10 Time Buckets</h2>
+    <p>
+      SEMI E10 classifies equipment time into productive, standby,
+      engineering, scheduled downtime, unscheduled downtime, and non-scheduled
+      states. In this project, the concept is used to explain machine uptime,
+      downtime, and production monitoring.
+    </p>
+  </section>
 
 </main>
 
+<footer>
+  © 2025 KAMMAR SODA | Smart Production Line Project
+</footer>
+
 </body>
 </html>
-<section>
-  <h2>Operator HMI</h2>
-
-  <img src="https://ahmedelkamar04.github.io/KAMAR-Soda-Plant/website/images/system-architecture.png"
-     alt="KAMAR SODA HMI"
-     class="showcase-image">
-
-    <p>
-      The Human Machine Interface (HMI) is the primary operator
-      control panel for the KAMAR SODA. It provides
-      real-time visibility of production performance, bottle
-      counts, machine status and alarm conditions.
-    </p>
-
-    <p>
-      Operators can start, stop, reset and safely shut down the
-      production line using dedicated control buttons. The HMI
-      also displays the active production stage and overall
-      system efficiency, allowing rapid response to faults and
-      process interruptions.
-    </p>
-</section>
-
-<section>
-    <h2>SEMI E10 Time Buckets</h2>
-
-    <div class="e10-diagram">
-
-        <div class="e10-row total">
-            <div class="box">TOTAL TIME</div>
-        </div>
-
-        <div class="e10-row">
-            <div class="box operations">OPERATIONS TIME</div>
-            <div class="box nonscheduled">NON-SCHEDULED</div>
-        </div>
-
-        <div class="e10-row">
-            <div class="box uptime">UPTIME</div>
-            <div class="box downtime">DOWNTIME</div>
-        </div>
-
-        <div class="e10-row">
-            <div class="box productive">PRODUCTIVE</div>
-            <div class="box standby">STANDBY</div>
-            <div class="box engineering">ENGINEERING</div>
-            <div class="box scheduled">SCHEDULED DT</div>
-            <div class="box unscheduled">UNSCHEDULED DT</div>
-        </div>
-
-    </div>
-
-    <div class="e10-legend">
-        <div>🟢 Productive – Producing saleable soda bottles</div>
-        <div>🟩 Standby – Waiting for materials</div>
-        <div>🟦 Engineering – Testing & commissioning</div>
-        <div>🟧 Scheduled DT – Cleaning & maintenance</div>
-        <div>🟥 Unscheduled DT – Equipment fault</div>
-        <div>⬜ Non-Scheduled – Plant shut down</div>
-    </div>
-</section>
-    <p>
-        SEMI E10 classifies equipment time into Productive,
-        Standby and Downtime states. This project uses a
-        simplified implementation to support production
-        monitoring and OEE calculations.
-    </p>
-</section>
-<section>
-    <h2>Front End — HMI Design</h2>
-
-    <img src="website/images/system-architecture.png"
-         alt="KAMAR HMI"
-         class="showcase-image">
-
-    <p>
-        The HMI is developed using Python and pygame. It
-        provides real-time visibility of production counts,
-        defect rate, alarms, machine state and production
-        progress.
-    </p>
-
-    <p>
-        Operators can Start, Stop, Reset and Emergency Stop
-        the production line. Defective products are identified
-        and alarm messages indicate the cause of the fault.
-    </p>
-</section>
