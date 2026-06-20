@@ -870,4 +870,263 @@ footer{
     text-align:center;
     padding:30px;
     border-top:1px solid #1f3346;
+}/* ===== KAMMAR SODA PROFESSIONAL HOMEPAGE ===== */
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #10283d, #06111d 55%, #02070c);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: rgba(6, 17, 29, 0.95);
+  border-bottom: 1px solid rgba(255, 132, 0, 0.35);
+  padding: 22px 60px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo,
+.brand {
+  background: #0b1b2b;
+  border: 2px solid #ff7a00;
+  color: #ff7a00;
+  width: 70px;
+  height: 55px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+header h1 {
+  font-size: 34px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  color: #ff7a00;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff7a00;
+}
+
+.snake-btn {
+  border: 1px solid #ff7a00;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  padding: 70px 70px 40px;
+}
+
+.hero-text .welcome {
+  color: #ff7a00;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-text h2 {
+  font-size: 72px;
+  line-height: 0.95;
+  margin: 0;
+  font-weight: 900;
+}
+
+.hero-text h2 span {
+  color: #ff7a00;
+}
+
+.hero-text h3 {
+  font-size: 28px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #cfd8e3;
+  max-width: 650px;
+}
+
+.buttons {
+  margin-top: 35px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 16px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff7a00, #d35400);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #ff7a00;
+  color: white;
+}
+
+.hero-image {
+  background: linear-gradient(135deg, rgba(255,122,0,0.25), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,122,0,0.35);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.stats {
+  margin: 20px 70px 60px;
+  border: 1px solid rgba(255,122,0,0.35);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(8, 24, 39, 0.8);
+}
+
+.card {
+  padding: 32px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.card h4 {
+  color: #ff7a00;
+  font-size: 42px;
+  margin: 0 0 10px;
+}
+
+.card p {
+  color: #d5dde8;
+  margin: 0;
+}
+
+.about {
+  text-align: center;
+  padding: 40px 80px;
+}
+
+.section-title {
+  color: #ff7a00;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.about p {
+  color: #cfd8e3;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: auto;
+}
+
+.features {
+  padding: 50px 70px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.feature-box {
+  background: rgba(8, 24, 39, 0.9);
+  border: 1px solid rgba(255,122,0,0.3);
+  border-radius: 14px;
+  padding: 28px;
+  min-height: 190px;
+}
+
+.feature-box h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.feature-box p {
+  color: #cfd8e3;
+  line-height: 1.6;
+}
+
+.feature-box a {
+  color: #ff7a00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #9ca9b8;
+  border-top: 1px solid rgba(255,122,0,0.25);
+}
+
+@media (max-width: 900px) {
+  header,
+  nav {
+    flex-direction: column;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 25px;
+  }
+
+  .hero-text h2 {
+    font-size: 48px;
+  }
+
+  .stats,
+  .features {
+    grid-template-columns: 1fr;
+    margin: 20px;
+    padding: 20px;
+  }
 }
