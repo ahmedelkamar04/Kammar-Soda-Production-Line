@@ -1555,3 +1555,10 @@ footer {
     box-shadow:0 20px 50px rgba(0,0,0,0.45);
     object-fit:cover;
 }
+.flow-step h3 {
+  color: #0b1b2b;
+  font-size: 16px;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 800;
+}
