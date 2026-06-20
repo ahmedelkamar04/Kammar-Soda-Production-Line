@@ -1611,3 +1611,50 @@ footer {
 .step-icon {
   font-size: 28px;
 }
+/* FINAL FIX — Production Flow horizontal layout */
+.flow-steps {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+}
+
+.flow-step {
+  min-width: 0 !important;
+  height: 160px !important;
+  background: #f8f5ea !important;
+  border: 3px solid #e96b3c !important;
+  border-radius: 4px !important;
+  color: #0b1b2b !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.flow-step h3 {
+  display: block !important;
+  color: #0b1b2b !important;
+  font-size: 15px !important;
+  margin-top: 12px !important;
+  font-weight: 800 !important;
+}
+
+.step-icon {
+  font-size: 28px !important;
+}
+
+.step-number {
+  background: #ff7a00 !important;
+  color: white !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-weight: 800 !important;
+  margin-bottom: 14px !important;
+}
